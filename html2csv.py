@@ -5,9 +5,10 @@ from progressbar import ProgressBar
 
 
 with open('config.json', 'r') as fd:
-    """ Contains personal name and is of format:
+    """ 'config.json' is of format:
          {
-             "name": "fubar"
+             "name": "fubar",
+             "file": "path/to/facebook.data"
          }
     """
     config = json.load(fd)
@@ -16,7 +17,7 @@ def clean_partner_info(s):
     return s.replace(config['name'], '').replace(', ', '')
 
 print('Opening file')
-with open('facebook-kpjkpj/html/messages.htm', 'r') as fd:
+with open(config['file'], 'r') as fd:
     soup = BeautifulSoup(fd.read())
 
 print('Loading content')
