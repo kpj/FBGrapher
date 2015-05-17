@@ -1,0 +1,9 @@
+*.swp
+
+.Rhistory
+
+*.csv
+*.png
+
+facebook-kpjkpj
+config.json
