@@ -6,7 +6,7 @@ messages <- read.csv("messages.csv", header=TRUE)
 
 corp <- Corpus(VectorSource(messages$message))
 corp <- tm_map(corp, stripWhitespace)
-corp <- tm_map(corp,  content_transformer(tolower))
+corp <- tm_map(corp, content_transformer(tolower))
 corp <- tm_map(corp, removeWords, stopwords("english"))
 corp <- tm_map(corp, removeWords, stopwords("german"))
 corp <- tm_map(corp, stemDocument)
