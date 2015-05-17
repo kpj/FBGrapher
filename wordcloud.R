@@ -13,7 +13,7 @@ corp <- tm_map(corp, stemDocument)
 
 wordcloud(
   corp,
-  scale=c(5,0.5),
+  scale=c(5, 0.5),
   #max.words=100,
   random.order=FALSE,
   rot.per=0.35,
